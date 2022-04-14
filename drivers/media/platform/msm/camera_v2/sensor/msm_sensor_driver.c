@@ -1131,14 +1131,14 @@ CSID_TG:
         push_component_info(CameraID,slave_info->sensor_name,
             match_tbl[i].vendor_name);
 
-	msm_sensor_fill_sensor_info(s_ctrl, probed_info, entity_name);
+            msm_sensor_fill_sensor_info(s_ctrl, probed_info, entity_name);
 
-	/*
-	 * Set probe succeeded flag to 1 so that no other camera shall
-	 * probed on this slot
-	 */
-	s_ctrl->is_probe_succeed = 1;
-	return rc;
+            /*
+            * Set probe succeeded flag to 1 so that no other camera shall
+            * probed on this slot
+            */
+            s_ctrl->is_probe_succeed = 1;
+            return rc;
 
 camera_power_down:
 	s_ctrl->func_tbl->sensor_power_down(s_ctrl);
